@@ -19,12 +19,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Baidu\\Tongji\\": "src"
+            "Baidu\\Tongji\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Baidu\\Tongji\\Test\\": "tests"
+            "Baidu\\Tongji\\Test\\": "tests/"
         }
     },
     "scripts": {
