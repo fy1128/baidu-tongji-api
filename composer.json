@@ -1,5 +1,6 @@
 {
     "name": "adzon/baidu-tongji-api",
+    "type": "library",
     "description": "百度统计API",
     "homepage": "https://github.com/adzon/baidu-tongji-api",
     "license": "MIT",
