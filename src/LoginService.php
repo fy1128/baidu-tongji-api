@@ -17,6 +17,11 @@ class LoginService {
      * @var string
      */
     private $uuid;
+	
+    /**
+     * @var string or int
+     */
+    private $account_type;
 
     /**
      * construct
@@ -26,6 +31,7 @@ class LoginService {
     public function __construct($loginUrl, $uuid) {
         $this->loginUrl = $loginUrl;
         $this->uuid = $uuid;
+        $this->uuid = $account_type;
     }
 
     /**
@@ -39,7 +45,7 @@ class LoginService {
         echo '[notice] start preLogin!' . PHP_EOL;
 
         $preLogin = new LoginConnection();
-        $preLogin->init($this->loginUrl);
+        $preLogin->init($this->loginUrl, $this->uuid, $account_type);
         $preLoginData = array(
             'username' => $userName,
             'token' => $token,

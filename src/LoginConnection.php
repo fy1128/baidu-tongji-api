@@ -37,9 +37,9 @@ class LoginConnection{
      * init
      * @param string $url
      */
-    public function init($url) {
+    public function init($url, $uuid, $account_type) {
         $this->url = $url;
-        $this->headers = array('UUID: '.UUID, 'account_type: '.ACCOUNT_TYPE, 'Content-Type:  data/gzencode and rsa public encrypt;charset=UTF-8');
+        $this->headers = array('UUID: '.$uuid, 'account_type: '.$account_type, 'Content-Type:  data/gzencode and rsa public encrypt;charset=UTF-8');
     }
 
     /**
@@ -66,7 +66,7 @@ class LoginConnection{
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, $this->url);
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
-        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 1);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 2);
         curl_setopt($curl, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
         curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
         curl_setopt($curl, CURLOPT_AUTOREFERER, 1);
