@@ -4,6 +4,8 @@
  */
 namespace Baidu\Tongji;
 
+require_once('Utility.php');
+
 /**
  * LoginConnection
  */
