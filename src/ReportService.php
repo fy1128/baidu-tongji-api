@@ -14,7 +14,7 @@ class ReportService {
     private $ucid;
     private $st;
     private $uuid;
-    private $account_type
+    private $account_type;
 
     /**
      * construct
@@ -69,7 +69,7 @@ class ReportService {
     public function getData($parameters) {
         echo '----------------------get data----------------------' . PHP_EOL;
         $apiConnection = new DataApiConnection();
-        $apiConnection->init($this->apiUrl . '/getData', $this->ucid);
+        $apiConnection->init($this->apiUrl . '/getData', $this->ucid, $this->uuid);
 
         $apiConnectionData = array(
             'header' => array(
