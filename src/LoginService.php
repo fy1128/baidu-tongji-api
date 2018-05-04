@@ -152,7 +152,7 @@ class LoginService {
         echo '[notice] start doLogout!' . PHP_EOL;
 
         $doLogout = new LoginConnection();
-        $doLogout->init($this->loginUrl);
+        $doLogout->init($this->loginUrl, $this->uuid, $this->account_type);
         $doLogoutData = array(
             'username' => $userName,
             'token' => $token,
