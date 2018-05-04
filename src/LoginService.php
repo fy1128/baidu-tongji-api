@@ -97,7 +97,7 @@ class LoginService {
         echo '[notice] start doLogin!' . PHP_EOL;
 
         $doLogin = new LoginConnection();
-        $doLogin->init($this->loginUrl);
+        $doLogin->init($this->loginUrl, $this->uuid, $this->account_type);
         $doLoginData = array(
             'username' => $userName,
             'token' => $token,
